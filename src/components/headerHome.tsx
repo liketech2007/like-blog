@@ -28,6 +28,9 @@ export function HeaderHome() {
               <Link href="/sobre-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Sobre nós</Link>
             </li>
             <li>
+                    <Link href="/contacte-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Contacte nós</Link>
+              </li>
+            <li>
               <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Política de <br /> Privacidade</Link>
             </li>
             <li>
@@ -56,10 +59,13 @@ export function HeaderHome() {
           {
             openMenu && <ul className="flex gap-4 justify-center items-center flex-col">
                     <li>
-                    <Link href="//list-posts" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Blog</Link>
+                    <Link href="/list-posts" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Blog</Link>
                   </li>
                   <li>
                     <Link href="/sobre-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Sobre nós</Link>
+                  </li>
+                  <li>
+                    <Link href="/contacte-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Contacte nós</Link>
                   </li>
                   <li>
                     <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Política de <br /> Privacidade</Link>
