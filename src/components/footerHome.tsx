@@ -5,7 +5,7 @@ import { ContextTheme } from "../contexts/contextTheme"
 import { useContext } from "react";
 import Link from "next/link";
 
-export function FooterHeader() {
+export function FooterHome() {
     const {theme,setTheme} = useContext(ContextTheme)
     return (
         <footer className="min-w-full p-4 border border-b-0 border-l-0 border-r-0 border-black dark:border-white flex flex-col md:flex-row gap-6">

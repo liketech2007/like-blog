@@ -41,21 +41,21 @@ export function MainHome() {
                 data && data.posts.map((post:{ img:string, slug:string,title:string,id:string}) => {
                     return (
                        
-                        <Link key={post.id} href={post.slug} className="p-4 flex flex-col md:flex-row border-t-0 border-l-0 border-r-0 border-b border-black dark:border-white gap-4">
+                        <Link key={post.id} href={`/post/${post.slug}`} className="p-4 flex flex-col md:flex-row border-t-0 border-l-0 border-r-0 border-b border-black dark:border-white gap-4">
                             <img src={post.img} alt={post.title} className="max-w-[200px]" />
                             <p>{post.title}</p>
                         </Link>
                     )
                 })
             }
-             <Link href="/list-posts" className="self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de postagem</Link>
+             <Link href="/list-posts" className="self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de artigos</Link>
             </div> 
 
             <div className="flex flex-row justify-center flex-wrap gap-4 p-4">
                 {
                     data1 && data1.posts.map((post:{ img:string, slug:string,title:string,id:string}) => {
                         return (
-                            <Link key={post.id} href={post.slug} className=" bg-gray-300 dark:bg-[#1E1E1F] dark:text-white flex flex-col justify-center items-center gap-2 p-4 rounded-lg">
+                            <Link key={post.id} href={`/post/${post.slug}`} className=" bg-gray-300 dark:bg-[#1E1E1F] dark:text-white flex flex-col justify-center items-center gap-2 p-4 rounded-lg">
                                 <img src={post.img} alt={post.title} className="max-w-[200px]" />
                                 <p className="max-w-[200px]">{post.title}</p>
                              </Link>
@@ -64,7 +64,7 @@ export function MainHome() {
                 }
             </div>
 
-            <Link href="/list-posts" className="m-6 self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de postagem</Link>
+            <Link href="/list-posts" className="m-6 self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de artigos</Link>
         </main>
     )
 }
