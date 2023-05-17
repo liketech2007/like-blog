@@ -28,8 +28,8 @@ export function MainHome() {
     const { data:data1 } = useQuery(GET_INFO_POST1)
   
     return (
-        <main className="mb-10 flex flex-col gap-16 md:gap-20">
-            <div className="flex gap-20 flex-col md:flex-row">
+        <main className="mb-10 flex justify-center items-center md:w-[60%] lg:w-[80%] flex-col gap-16 md:gap-20 ">
+            <div className="flex gap-20 flex-col lg:flex-row">
                 <h1 className="text-black dark:text-white text-6xl md:text-8xl  p-4">Blog de <br /> Tecnologia</h1>
                <div className="mr-10 m-3">
                <img src={png1.src} alt="imagem de undraw" className="max-w-[100%] md:max-w-[400px]"/>
@@ -51,7 +51,7 @@ export function MainHome() {
              <Link href="/list-posts" className="self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de postagem</Link>
             </div> 
 
-            <div className="flex flex-row gap-4 p-4">
+            <div className="flex flex-row justify-center flex-wrap gap-4 p-4">
                 {
                     data1 && data1.posts.map((post:{ img:string, slug:string,title:string,id:string}) => {
                         return (
@@ -63,6 +63,8 @@ export function MainHome() {
                     })
                 }
             </div>
+
+            <Link href="/list-posts" className="m-6 self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de postagem</Link>
         </main>
     )
 }

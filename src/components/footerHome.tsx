@@ -35,7 +35,7 @@ export function FooterHeader() {
               <Link href="https://www.youtube.com/channel/UCz_QcPlV5pAJxbHjVaY6pMA" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Youtube</Link>
             </li>
             <li>
-              <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Tik Tok</Link>
+              <Link href="https://www.tiktok.com/@liketech7" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Tik Tok</Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/in/like-tech-986889270/" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">linkedin</Link>
