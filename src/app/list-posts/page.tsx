@@ -3,6 +3,7 @@ import { FooterHome } from "@/components/footerHome";
 import { HeaderSecond } from "@/components/headerSecond";
 import Link from "next/link";
 import { useQuery, gql } from '@apollo/client';
+import { SpinnerGap } from "@phosphor-icons/react";
 
 export default function ListPosts() {
     const GET_INFO_POST = gql`
@@ -16,7 +17,7 @@ export default function ListPosts() {
       }      
     `
 
-    const { data } = useQuery(GET_INFO_POST)
+    const { data,loading } = useQuery(GET_INFO_POST)
     return ( 
         <>
             <HeaderSecond />
@@ -33,6 +34,11 @@ export default function ListPosts() {
                              </Link>
                         )
                     })
+                }
+                {
+                    loading && <div className="flex justify-center items-center min-h-[60vh]">
+                        <SpinnerGap size={48} className="animate-spin" />
+                    </div>
                 }
             </div>
             </main>

@@ -8,7 +8,7 @@ export default function ContacteNos() {
             <HeaderSecond />
             <main className="p-4 min-h-[70vh] md:w-[50%] lg:w-[70%] flex-col">
                 <h1 className="text-3xl font-bold my-4 ml-6">Contacte-nos</h1>
-                <p>
+                <p className="ml-8">
                 Entre em Contato
 
                 Ficamos felizes em receber sua mensagem. Se você tiver alguma dúvida, comentário ou solicitação, por favor, entre em contato conosco pelos meios a seguir:

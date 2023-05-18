@@ -1,13 +1,10 @@
-export default function RootLayout({
+export default function PostLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
       <>
-      <head>
-        <title>Post</title>
-      </head>
           {children}
     </>
   )
