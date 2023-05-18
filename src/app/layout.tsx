@@ -23,6 +23,15 @@ export default function RootLayout({
       <ContextTheme.Provider value={{theme,setTheme}}>
       <html lang="pt" className={theme}>
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5CHTM1NXM"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-B5CHTM1NXM');
+        </script>
+        <meta name="google-site-verification" content="1lfwbI5iaZGzNLpAToU8l8xFTQX3Vli6rohjtGbT5dU" />
          <link rel="icon" type="image/x-icon" href={logo.src} />
       </head>
       <body className='bg-primary text-textP dark:bg-secondary dark:text-textS flex flex-col lg:justify-center lg:items-center md:justify-center md:items-center'>
