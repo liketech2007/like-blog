@@ -10,6 +10,7 @@ import { CardPost } from "@/components/cardPost";
 
 
 async function getData(slug: string) {
+    await fetch("https://like-blog.vercel.app/api")
     const form = JSON.stringify({
         query:`
         query MyQuery {

@@ -46,7 +46,7 @@ export function HeaderHome() {
               </button>
             </li>
             <li>
-              <Link href="/app" className="dark:bg-white dark:text-button bg-button text-white hover:bg-white hover:text-button dark:hover:bg-button dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Aplicação</Link>
+              <Link href="/" className="dark:bg-white dark:text-button bg-button text-white hover:bg-white hover:text-button dark:hover:bg-button dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Aplicação</Link>
             </li>
           </ul>
         </nav>
@@ -84,7 +84,7 @@ export function HeaderHome() {
                     </button>
                   </li>
                   <li>
-                    <Link href="/app" className="dark:bg-white dark:text-button bg-button text-white hover:bg-white hover:text-button dark:hover:bg-button dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Aplicação</Link>
+                    <Link href="/" className="dark:bg-white dark:text-button bg-button text-white hover:bg-white hover:text-button dark:hover:bg-button dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Aplicação</Link>
                   </li>
             </ul>
           }

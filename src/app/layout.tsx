@@ -28,6 +28,7 @@ export default function RootLayout({
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KGQ6KK9');`}}></script>
          <link rel="icon" type="image/x-icon" href={logo.src} /> 
+         <title>Like Blog - Aplicação</title>
       </head>
       <body className='bg-primary text-textP dark:bg-secondary dark:text-textS flex flex-col lg:justify-center lg:items-center md:justify-center md:items-center'>
         <noscript dangerouslySetInnerHTML={{
