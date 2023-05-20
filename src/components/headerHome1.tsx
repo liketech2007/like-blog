@@ -13,11 +13,11 @@ export function HeaderHome1() {
   const {theme,setTheme} = useContext(ContextTheme)
   return (
     <header className="p-4 flex justify-between  md:w-[60%] lg:w-[80%]">
-      <div>
+      <Link href="/home">
        {
         theme === "" ?  <img src={logo.src} className="max-w-[100px]" alt="Logo do like blog"/> :  <img src={logoDark.src} className="max-w-[100px]"  alt="Logo do like blog"/>
        }
-      </div>
+      </Link>
       <div>
         <nav className="hidden md:block">
           <ul className="flex gap-6  items-center justify-between">
