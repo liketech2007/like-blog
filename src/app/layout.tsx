@@ -27,6 +27,8 @@ export default function RootLayout({
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KGQ6KK9');`}}></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683016587498358"
+     crossOrigin="anonymous"></script>
          <link rel="icon" type="image/x-icon" href={logo.src} /> 
          <title>Like Blog - Aplicação</title>
       </head>
