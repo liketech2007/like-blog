@@ -7,9 +7,12 @@ import rehypeReact from "rehype-react";
 import React from "react"
 import "./post.css"
 import { CardPost } from "@/components/cardPost";
+import { Indexe } from "@/indexe/route";
+
 
 
 async function getData(slug: string) {
+    Indexe(`https://like-blog.vercel.app/${slug}`)
     await fetch("https://like-blog.vercel.app/api")
     const form = JSON.stringify({
         query:`
