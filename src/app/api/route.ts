@@ -21,8 +21,7 @@ const res1 = await fetch(`${process.env.NEXT_PUBLIC_HYGRAPH_URL}`,{
     body: form
   })
   const data = await res1.json()
-  const xml = `
-  <?xml version="1.0" encoding="UTF-8"?>
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://like-blog.vercel.app/</loc>
