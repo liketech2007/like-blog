@@ -1,6 +1,5 @@
 import fs from 'fs';
 import { NextResponse } from "next/server";
-import path from 'path';
 
 export async function GET(request: Request) {
 const form = JSON.stringify({
@@ -12,6 +11,7 @@ const form = JSON.stringify({
           slug
           img
           date
+          description
         }
       }     
     ` 
@@ -61,5 +61,42 @@ const res1 = await fetch(`${process.env.NEXT_PUBLIC_HYGRAPH_URL}`,{
 fs.writeFile("./public/sitemap.xml", xml , (error) => {
   if(error) throw error; 
 })
+const feed = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+<channel>
+<title>Link blog</title>
+<atom:link href="https://like-blog.vercel.app/feed/" rel="self" type="application/rss+xml" />
+<link>https://like-blog.vercel.app</link>
+<description>Blog de Tecnologia</description>
+<lastBuildDate>2023-05-17</lastBuildDate>
+<image>
+<url>https://like-blog.vercel.app/_next/static/media/logo.32e6ed5b.png</url>
+<title>Like Blog</title>
+<link>https://like-blog.vercel.app</link>
+<width>32</width>
+<height>32</height>
+</image>${data.data.posts
+  .map(
+    (data:any) => `
+      <item>
+      <title>${data.title}</title>
+      <link>https://like-blog.vercel.app/post/${data.slug}</link>
+      <pubDate>${data.date}</pubDate>
+      <description>${data.description}</description>
+      </item>
+      `,
+).join('')}
+</channel>
+</rss>`
+fs.writeFile("./public/rss.xml", feed , (error) => {
+  if(error) throw error; 
+})
+
 return NextResponse.json({ text: "OK"})
 }
